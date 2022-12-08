@@ -1,14 +1,16 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+    state: {
+        crimes: [],
+    },
+    getters: {
+        getTopCrimes: (state) => {
+            let crimes = state.crimes.slice(0, 10);
+            return crimes;
+        },
+    },
+    mutations: {},
+    actions: {},
+    modules: {},
+});
