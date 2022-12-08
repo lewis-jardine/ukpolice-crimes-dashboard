@@ -8,28 +8,38 @@
                     item-title="name"
                     item-value="url"
                     label="Select Crime Catagory"
+                    variant="solo"
+                    clearable
                 ></v-select>
             </v-col>
             <v-col>
                 <v-text-field
                     label="Latitude"
                     v-model="latitudeInput"
+                    variant="solo"
+                    clearable
                 ></v-text-field>
             </v-col>
             <v-col>
                 <v-text-field
                     label="Longitude"
                     v-model="longitudeInput"
+                    variant="solo"
+                    clearable
                 ></v-text-field>
             </v-col>
             <v-col>
                 <v-text-field
                     label="Date (YYYY-MM)"
                     v-model="dateInput"
+                    variant="solo"
+                    clearable
                 ></v-text-field>
             </v-col>
             <v-col>
-                <v-btn type="submit">Get Results</v-btn>
+                <v-btn prepend-icon="mdi-filter" type="submit"
+                    >Get Results</v-btn
+                >
             </v-col>
         </v-row>
     </v-form>
@@ -77,3 +87,21 @@ function onSubmit() {
         });
 }
 </script>
+
+<style scoped>
+.v-form {
+    margin: 2rem auto;
+    padding: 1rem 3rem;
+    width: 80%;
+    min-width: 800px;
+}
+
+.v-col {
+    padding-bottom: 0;
+}
+
+.v-btn {
+    height: 3.5rem;
+    width: 100%;
+}
+</style>
